@@ -22,6 +22,7 @@ jobs:
       - name: Test
         env:
           ESV_API_KEY: ${{ secrets.ESV_API_KEY }}
+          BIBLIA_API_KEY: ${{ secrets.BIBLIA_API_KEY }}
         run: yarn jest dist
       - name: Merge
         if: ${{ github.event.pull_request.user.login == 'dependabot-preview[bot]' }}
