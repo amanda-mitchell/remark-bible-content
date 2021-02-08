@@ -1,0 +1,48 @@
+name: Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --ignore-scripts
+      - name: Prettier check
+        run: yarn prettier --check "./lib/*.{js,ts,md,jsx,tsx}"
+      - name: Lint
+        run: yarn eslint './lib/**/*.{js,ts,jsx,tsx}'
+      - name: Typescript compile
+        run: yarn tsc
+      - name: Test
+        env:
+          ESV_API_KEY: ${{ secrets.ESV_API_KEY }}
+        run: yarn jest dist
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --ignore-scripts
+      - name: Typescript compile
+        run: yarn tsc
+      - name: Release
+        env:
+          DEPENDABOT_TOKEN: ${{ secrets.PRIVATE_PACKAGE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_NPM_CONFIG_REGISTRY: https://npm.pkg.github.com/
+          PUBLIC_NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PUBLIC_NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
+        run: yarn semantic-release
