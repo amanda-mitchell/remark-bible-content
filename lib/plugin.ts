@@ -32,10 +32,10 @@ export function insertBibleContent({
   skipReferenceDetection = false,
 }: InsertBibleContentOptions) {
   if (!bibliaApi) {
-    throw new Error('provide this');
+    throw new Error('bibliaApi is required');
   }
-  if (!esvApi) {
-    throw new Error('provide this');
+  if (!esvApi && version === 'esv') {
+    throw new Error('esvApi is required when inserting ESV content');
   }
 
   return async function transform(tree: Node) {
