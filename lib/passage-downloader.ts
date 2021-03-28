@@ -46,7 +46,6 @@ export function createPassageDownloader({
       includeShortCopyright: false,
       includeChapterNumbers: false,
       includeSubheadings: false,
-      inlineStyles: true,
       includeAudioLink: false,
     });
 

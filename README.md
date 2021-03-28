@@ -72,7 +72,7 @@ When run, this script will print
 <h1>Heading</h1>
 <blockquote>
 <p class="block-indent"><span class="begin-line-group"></span>
-<span id="p20026004_01-1" class="line" style="margin: 0;text-indent: -3.5em;padding-left: 5.5em;clear:both;"><b class="verse-num inline" id="v20026004-1">4&nbsp;</b>&nbsp;Answer not a fool according to his folly,</span><br><span id="p20026004_01-1" class="indent line" style="margin: 0;text-indent: -3.5em;clear:both;padding-left:2em;display:inline-block;">&nbsp;lest you be like him yourself.</span><br><span id="p20026005_01-1" class="line" style="margin: 0;text-indent: -3.5em;padding-left: 5.5em;clear:both;"><b class="verse-num inline" id="v20026005-1">5&nbsp;</b>&nbsp;Answer a fool according to his folly,</span><br><span id="p20026005_01-1" class="indent line" style="margin: 0;text-indent: -3.5em;clear:both;padding-left:2em;display:inline-block;">&nbsp;lest he be wise in his own eyes.</span><br></p><span class="end-line-group"></span>
+<span id="p20026004_01-1" class="line"><b class="verse-num inline" id="v20026004-1">4&nbsp;</b>&nbsp;Answer not a fool according to his folly,</span><br><span id="p20026004_01-1" class="indent line">&nbsp;lest you be like him yourself.</span><br><span id="p20026005_01-1" class="line"><b class="verse-num inline" id="v20026005-1">5&nbsp;</b>&nbsp;Answer a fool according to his folly,</span><br><span id="p20026005_01-1" class="indent line">&nbsp;lest he be wise in his own eyes.</span><br></p><span class="end-line-group"></span>
 <footer><a href="https://biblia.com/bible/esv/proverbs/26/4-5">Proverbs 26:4–5</a> (ESV)</footer>
 </blockquote>
 <p>This passage is profound.</p>

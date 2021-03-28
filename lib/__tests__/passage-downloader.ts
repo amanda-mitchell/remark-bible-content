@@ -21,7 +21,7 @@ it('gets text from the ESV', async () => {
   expect(result).toEqual(
     build(
       'html',
-      '<p class="block-indent"><span class="begin-line-group"></span>\n<span id="p20026004_01-1" class="line" style="margin: 0;text-indent: -3.5em;padding-left: 5.5em;clear:both;"><b class="verse-num inline" id="v20026004-1">4&nbsp;</b>&nbsp;&nbsp;Answer not a fool according to his folly,</span><br /><span id="p20026004_01-1" class="indent line" style="margin: 0;text-indent: -3.5em;clear:both;padding-left:2em;display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;lest you be like him yourself.</span><br /><span id="p20026005_01-1" class="line" style="margin: 0;text-indent: -3.5em;padding-left: 5.5em;clear:both;"><b class="verse-num inline" id="v20026005-1">5&nbsp;</b>&nbsp;&nbsp;Answer a fool according to his folly,</span><br /><span id="p20026005_01-1" class="indent line" style="margin: 0;text-indent: -3.5em;clear:both;padding-left:2em;display:inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;lest he be wise in his own eyes.</span><br /></p><span class="end-line-group"></span>'
+      '<p class="block-indent"><span class="begin-line-group"></span>\n<span id="p20026004_01-1" class="line"><b class="verse-num inline" id="v20026004-1">4&nbsp;</b>&nbsp;&nbsp;Answer not a fool according to his folly,</span><br /><span id="p20026004_01-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;lest you be like him yourself.</span><br /><span id="p20026005_01-1" class="line"><b class="verse-num inline" id="v20026005-1">5&nbsp;</b>&nbsp;&nbsp;Answer a fool according to his folly,</span><br /><span id="p20026005_01-1" class="indent line">&nbsp;&nbsp;&nbsp;&nbsp;lest he be wise in his own eyes.</span><br /></p><span class="end-line-group"></span>'
     )
   );
 });
