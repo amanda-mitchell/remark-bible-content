@@ -28,7 +28,7 @@ function createProcessor(
   version: AvailableBible = 'leb',
   skipReferenceDetection = false
 ) {
-  return unified()
+  return (unified as any)()
     .use(markdown)
     .use(insertBibleContent, {
       bibliaApi,
@@ -72,7 +72,7 @@ it('does nothing when skipping reference tagging', async () => {
 });
 
 it('cooperates with the tag-bible-references plugin', async () => {
-  const processor = unified()
+  const processor = (unified as any)()
     .use(markdown)
     .use(tagBibleReferences, { bibliaApi })
     .use(insertBibleContent, {
