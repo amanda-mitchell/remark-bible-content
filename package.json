@@ -32,7 +32,7 @@
     "rehype-stringify": "^8.0.0",
     "remark-parse": "^9.0.0",
     "remark-rehype": "^8.0.0",
-    "unified": "^10.0.1"
+    "unified": "^9.2.0"
   },
   "peerDependencies": {
     "@amanda-mitchell/biblia-api": "3.2.2",
