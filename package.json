@@ -27,7 +27,7 @@
     "@types/node-fetch": "^2.5.8",
     "@types/unist": "^2.0.3",
     "dotenv": "^14.1.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.2.0",
     "rehype-raw": "^5.0.0",
     "rehype-stringify": "^8.0.0",
     "remark-parse": "^9.0.0",
