@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@amanda-mitchell/biblia-api/-/biblia-api-3.2.2.tgz#db4762d31d63ea955d351f38ecbaac34684074e5"
   integrity sha512-B5sjTgqVzk01k3IMFN0LHB3OPDqlyY2V8w+JCneLRrAxbc5mhv/HCzzpgz712krlj49jCQfUvxsKSgtvUJR/Qg==
 
-"@amanda-mitchell/esv-api@^1.3.1":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@amanda-mitchell/esv-api/-/esv-api-1.3.1.tgz#675ebedb4beb87436a46f2cbaca4d3a085d1bfa0"
-  integrity sha512-dEO7sla1zWgedW5Da6CiWg0JZXvm4fY/7ZmHADTzlxS5krxYT0eAyAXVQ37KMfJjQakvk7rmIhLk2tM7hxmPhQ==
+"@amanda-mitchell/esv-api@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@amanda-mitchell/esv-api/-/esv-api-2.0.0.tgz#e094e1ae6ec4f63fbdf0347bd2c70044b7c9e92c"
+  integrity sha512-mVw7vbfeAKlcwRl4cD08qRp52Ml68iGOvknnalhWU4IA0zxqbMw1KLPw8IttUx6GvMIa3MtwxJHQ2g0j6BFrYQ==
 
 "@amanda-mitchell/node-project-scripts@^2.39.0":
   version "2.206.0"
