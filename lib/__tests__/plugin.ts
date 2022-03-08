@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import unified from 'unified';
+import { unified } from 'unified';
 import markdown from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import raw from 'rehype-raw';
@@ -8,9 +8,9 @@ import html from 'rehype-stringify';
 import { tagBibleReferences } from '@amanda-mitchell/remark-tag-bible-references';
 import { createBibliaApiClient } from '@amanda-mitchell/biblia-api';
 import { createEsvApiClient } from '@amanda-mitchell/esv-api';
-import { getExpectedEnvironmentVariable } from '../test-util';
-import type { AvailableBible } from '../common-types';
-import { insertBibleContent } from '../plugin';
+import { getExpectedEnvironmentVariable } from '../test-util/index.js';
+import type { AvailableBible } from '../common-types.js';
+import { insertBibleContent } from '../plugin.js';
 
 const bibliaApiKey = getExpectedEnvironmentVariable('BIBLIA_API_KEY');
 const esvApiKey = getExpectedEnvironmentVariable('ESV_API_KEY');

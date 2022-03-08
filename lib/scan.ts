@@ -1,7 +1,7 @@
 import type { Node } from 'unist';
-import { BibliaApiClient } from './common-types';
-import { findRelevantNodes } from './find-nodes';
-import { isParent } from './predicates';
+import { BibliaApiClient } from './common-types.js';
+import { findRelevantNodes } from './find-nodes.js';
+import { isParent } from './predicates.js';
 
 export async function scanTextNodes(
   tree: Node,

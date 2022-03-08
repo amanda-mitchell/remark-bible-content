@@ -1,6 +1,6 @@
 import type { Node } from 'unist';
-import { findRelevantNodes } from './find-nodes';
-import { isParent } from './predicates';
+import { findRelevantNodes } from './find-nodes.js';
+import { isParent } from './predicates.js';
 
 export function applyReplacements(
   tree: Node,

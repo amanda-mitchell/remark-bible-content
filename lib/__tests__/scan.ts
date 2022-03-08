@@ -1,8 +1,8 @@
 import { createBibliaApiClient } from '@amanda-mitchell/biblia-api';
 import fetch from 'node-fetch';
-import build from 'unist-builder';
-import { scanTextNodes } from '../scan';
-import { getExpectedEnvironmentVariable } from '../test-util';
+import { u as build } from 'unist-builder';
+import { scanTextNodes } from '../scan.js';
+import { getExpectedEnvironmentVariable } from '../test-util/index.js';
 
 const apiKey = getExpectedEnvironmentVariable('BIBLIA_API_KEY');
 

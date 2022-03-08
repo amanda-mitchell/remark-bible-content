@@ -1,14 +1,14 @@
 import type { Node } from 'unist';
-import build from 'unist-builder';
-import { applyReplacements } from './apply';
+import { u as build } from 'unist-builder';
+import { applyReplacements } from './apply.js';
 import type {
   AvailableBible,
   EsvApiClient,
   BibliaApiClient,
-} from './common-types';
-import { createBibliaLink } from './links';
-import { createPassageDownloader } from './passage-downloader';
-import { scanTextNodes } from './scan';
+} from './common-types.js';
+import { createBibliaLink } from './links.js';
+import { createPassageDownloader } from './passage-downloader.js';
+import { scanTextNodes } from './scan.js';
 
 type InsertBibleContentOptions = {
   bibliaApi: BibliaApiClient;

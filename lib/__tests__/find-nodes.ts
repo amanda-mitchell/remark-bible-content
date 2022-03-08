@@ -1,5 +1,5 @@
-import build from 'unist-builder';
-import { findRelevantNodes } from '../find-nodes';
+import { u as build } from 'unist-builder';
+import { findRelevantNodes } from '../find-nodes.js';
 
 it('find appropriate paragraphs', async () => {
   const document = build('root', [

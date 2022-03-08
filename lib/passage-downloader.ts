@@ -1,4 +1,4 @@
-import build from 'unist-builder';
+import { u as build } from 'unist-builder';
 import type {
   BibliaApiClient,
   EsvApiClient,

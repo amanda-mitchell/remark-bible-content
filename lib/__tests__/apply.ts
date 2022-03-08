@@ -1,5 +1,5 @@
-import build from 'unist-builder';
-import { applyReplacements } from '../apply';
+import { u as build } from 'unist-builder';
+import { applyReplacements } from '../apply.js';
 
 it('replaces nodes', () => {
   const doc = build('root', { data: { key: 'value' } }, [

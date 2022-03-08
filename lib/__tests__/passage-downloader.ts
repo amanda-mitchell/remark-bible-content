@@ -1,9 +1,9 @@
 import fetch from 'node-fetch';
-import build from 'unist-builder';
+import { u as build } from 'unist-builder';
 import { createBibliaApiClient } from '@amanda-mitchell/biblia-api';
 import { createEsvApiClient } from '@amanda-mitchell/esv-api';
-import { createPassageDownloader } from '../passage-downloader';
-import { getExpectedEnvironmentVariable } from '../test-util';
+import { createPassageDownloader } from '../passage-downloader.js';
+import { getExpectedEnvironmentVariable } from '../test-util/index.js';
 
 const bibliaApiKey = getExpectedEnvironmentVariable('BIBLIA_API_KEY');
 const esvApiKey = getExpectedEnvironmentVariable('ESV_API_KEY');
