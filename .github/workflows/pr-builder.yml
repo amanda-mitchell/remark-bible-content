@@ -10,19 +10,20 @@ jobs:
         with:
           ref: ${{github.event.pull_request.head.ref}}
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 16
       - name: Install dependencies
         run: yarn --frozen-lockfile --ignore-scripts
       - name: Prettier check
-        run: yarn prettier --check "./**/*.{js,md,jsx,ts,tsx}"
+        run: yarn prettier --check "./**/*.{js,md,jsx,ts,tsx,cjs,mjs}"
       - name: Lint
-        run: yarn eslint './lib/**/*.{js,ts,jsx,tsx}'
+        run: yarn eslint './lib/**/*.{js,ts,jsx,tsx,cjs,mjs}'
       - name: Typescript compile
         run: yarn tsc
       - name: Test
         env:
           ESV_API_KEY: ${{ secrets.ESV_API_KEY }}
           BIBLIA_API_KEY: ${{ secrets.BIBLIA_API_KEY }}
+          NODE_OPTIONS: --experimental-vm-modules
         run: yarn jest dist
