@@ -8,9 +8,9 @@
   integrity sha512-BhHeZPnpEdqg6rl9TOF2xHI3QJYF71dQGUoVLnQFpoWEJ5j9r+lc7hZuOR/kjGb4MBJKkjlFEae03Ch84/h9mg==
 
 "@amanda-mitchell/esv-api@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@amanda-mitchell/esv-api/-/esv-api-2.0.1.tgz#f556609f641936ebdcba284d4d226681a7e0c6ca"
-  integrity sha512-c+8xVGs1m0oHNIoKV2bqaN+ToS6c44ORH21C28ZpCBIBOVhX7/F8YsbNGrL8TLuLBxKjRccRyRHTbL1valxK9A==
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@amanda-mitchell/esv-api/-/esv-api-2.0.2.tgz#7773605ce8eae2777a2c7cc4713761a39f07d05c"
+  integrity sha512-PT+8thEsO8ZXkWYRD6ZsGirlO5c3K8FcmKc87g8ZNovM/Fn3BTG+Yd5fhHhsyk7g26ZEyFCLgYHXr4EcZmslIg==
 
 "@amanda-mitchell/node-project-scripts@^3.11.0":
   version "3.11.0"
