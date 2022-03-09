@@ -3,9 +3,9 @@
 
 
 "@amanda-mitchell/biblia-api@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@amanda-mitchell/biblia-api/-/biblia-api-4.0.1.tgz#bded13c576a92c3abcbb0bf25da159b203065c0e"
-  integrity sha512-BhHeZPnpEdqg6rl9TOF2xHI3QJYF71dQGUoVLnQFpoWEJ5j9r+lc7hZuOR/kjGb4MBJKkjlFEae03Ch84/h9mg==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@amanda-mitchell/biblia-api/-/biblia-api-4.0.2.tgz#883fd550bca7d8eaeb95b37c470bc5052e179ed3"
+  integrity sha512-8YQNON5nAt1ncGJoIXQ5t+14el/XdnqILoZSN1sFBSUXvU1pQKzofT1pUgjJoWPRlNPCjAbxhpPD9j807s/Zmg==
 
 "@amanda-mitchell/esv-api@^2.0.1":
   version "2.0.2"
