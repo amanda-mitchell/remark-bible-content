@@ -3,7 +3,7 @@ on: pull_request_target
 jobs:
   build:
     if: ${{ github.event.pull_request.user.login == 'dependabot[bot]' }}
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
