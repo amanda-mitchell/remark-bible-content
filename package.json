@@ -23,7 +23,7 @@
   "devDependencies": {
     "@amanda-mitchell/biblia-api": "^4.0.1",
     "@amanda-mitchell/esv-api": "^2.0.1",
-    "@amanda-mitchell/node-project-scripts": "^3.11.0",
+    "@amanda-mitchell/node-project-scripts": "^4.5.0",
     "@amanda-mitchell/remark-tag-bible-references": "^5.0.0",
     "@types/node-fetch": "^2.5.8",
     "@types/unist": "^3.0.0",
