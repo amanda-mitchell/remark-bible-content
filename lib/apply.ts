@@ -5,7 +5,7 @@ import { isParent } from './predicates.js';
 export function applyReplacements(
   tree: Node,
   replacements: Record<string, Node>,
-  skipReferenceDetection: boolean
+  skipReferenceDetection: boolean,
 ) {
   if (!isParent(tree)) {
     return tree;
@@ -14,7 +14,7 @@ export function applyReplacements(
   const targetNodeToReplacement = new Map<Node, Node>();
   for (const { node, reference } of findRelevantNodes(
     tree,
-    skipReferenceDetection
+    skipReferenceDetection,
   )) {
     const replacement = replacements[reference];
 
@@ -26,7 +26,7 @@ export function applyReplacements(
   return {
     ...tree,
     children: tree.children.map(
-      node => targetNodeToReplacement.get(node) || node
+      node => targetNodeToReplacement.get(node) || node,
     ),
   };
 }

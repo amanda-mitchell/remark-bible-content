@@ -2,7 +2,7 @@ import type { Node, Parent } from 'unist';
 
 export function* findRelevantNodes(
   tree: Parent,
-  skipReferenceDetection: boolean
+  skipReferenceDetection: boolean,
 ) {
   for (const child of tree.children) {
     if (!isParagraph(child)) {

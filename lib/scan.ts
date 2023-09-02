@@ -6,7 +6,7 @@ import { isParent } from './predicates.js';
 export async function scanTextNodes(
   tree: Node,
   bibliaApi: BibliaApiClient,
-  skipReferenceDetection: boolean
+  skipReferenceDetection: boolean,
 ) {
   if (!bibliaApi) {
     throw new Error('bibliaApi is required.');
@@ -18,8 +18,8 @@ export async function scanTextNodes(
 
   const allReferences = uniqueValues(
     [...findRelevantNodes(tree, skipReferenceDetection)].map(
-      ({ reference }) => reference
-    )
+      ({ reference }) => reference,
+    ),
   );
 
   const entries = await Promise.all(
@@ -35,7 +35,7 @@ export async function scanTextNodes(
       }
 
       return [value, { passage, parts: passages[0].parts }] as const;
-    })
+    }),
   );
 
   return Object.fromEntries(entries.filter(isDefined));

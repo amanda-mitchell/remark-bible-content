@@ -26,7 +26,7 @@ This passage is profound.`;
 
 function createProcessor(
   version: AvailableBible = 'leb',
-  skipReferenceDetection = false
+  skipReferenceDetection = false,
 ) {
   return unified()
     .use(markdown)
@@ -47,7 +47,7 @@ it('creates esv references correctly', async () => {
   const result = await processor.process(document);
 
   expect(String(result)).toEqual(
-    '<h1>Heading</h1>\n<blockquote>\n<p class="block-indent"><span class="begin-line-group"></span>\n<span id="p20026004_01-1" class="line"><b class="verse-num inline" id="v20026004-1">4\u00a0</b>\u00a0\u00a0Answer not a fool according to his folly,</span><br><span id="p20026004_01-1" class="indent line">\u00a0\u00a0\u00a0\u00a0lest you be like him yourself.</span><br><span id="p20026005_01-1" class="line"><b class="verse-num inline" id="v20026005-1">5\u00a0</b>\u00a0\u00a0Answer a fool according to his folly,</span><br><span id="p20026005_01-1" class="indent line">\u00a0\u00a0\u00a0\u00a0lest he be wise in his own eyes.</span><br></p><span class="end-line-group"></span>\n<footer><a href="https://biblia.com/bible/esv/proverbs/26/4-5">Proverbs 26:4–5</a> (ESV)</footer>\n</blockquote>\n<p>This passage is profound.</p>'
+    '<h1>Heading</h1>\n<blockquote>\n<p class="block-indent"><span class="begin-line-group"></span>\n<span id="p20026004_01-1" class="line"><b class="verse-num inline" id="v20026004-1">4\u00a0</b>\u00a0\u00a0Answer not a fool according to his folly,</span><br><span id="p20026004_01-1" class="indent line">\u00a0\u00a0\u00a0\u00a0lest you be like him yourself.</span><br><span id="p20026005_01-1" class="line"><b class="verse-num inline" id="v20026005-1">5\u00a0</b>\u00a0\u00a0Answer a fool according to his folly,</span><br><span id="p20026005_01-1" class="indent line">\u00a0\u00a0\u00a0\u00a0lest he be wise in his own eyes.</span><br></p><span class="end-line-group"></span>\n<footer><a href="https://biblia.com/bible/esv/proverbs/26/4-5">Proverbs 26:4–5</a> (ESV)</footer>\n</blockquote>\n<p>This passage is profound.</p>',
   );
 });
 
@@ -57,7 +57,7 @@ it('creates leb references correctly', async () => {
   const result = await processor.process(document);
 
   expect(String(result)).toEqual(
-    '<h1>Heading</h1>\n<blockquote>\n<p style="font-size:12pt; margin-left:45pt; text-indent:-27pt;" lang="en-US">\n\t\tDo not answer a fool according to his folly \n\t</p>\n\t<p style="font-size:12pt; margin-left:63pt; text-indent:-27pt;" lang="en-US">\n\t\tlest you become like him—even you. \n\t</p>\n\t<p style="font-size:12pt; margin-left:45pt; text-indent:-27pt;" lang="en-US">\n\t\tAnswer a fool according to his folly, \n\t</p>\n\t<p style="font-size:12pt; margin-left:63pt; text-indent:-27pt;" lang="en-US">\n\t\tor else he will be wise in his own eyes.\n\t</p>\n<footer><a href="https://biblia.com/bible/leb/proverbs/26/4-5">Proverbs 26:4–5</a> (LEB)</footer>\n</blockquote>\n<p>This passage is profound.</p>'
+    '<h1>Heading</h1>\n<blockquote>\n<p style="font-size:12pt; margin-left:45pt; text-indent:-27pt;" lang="en-US">\n\t\tDo not answer a fool according to his folly \n\t</p>\n\t<p style="font-size:12pt; margin-left:63pt; text-indent:-27pt;" lang="en-US">\n\t\tlest you become like him—even you. \n\t</p>\n\t<p style="font-size:12pt; margin-left:45pt; text-indent:-27pt;" lang="en-US">\n\t\tAnswer a fool according to his folly, \n\t</p>\n\t<p style="font-size:12pt; margin-left:63pt; text-indent:-27pt;" lang="en-US">\n\t\tor else he will be wise in his own eyes.\n\t</p>\n<footer><a href="https://biblia.com/bible/leb/proverbs/26/4-5">Proverbs 26:4–5</a> (LEB)</footer>\n</blockquote>\n<p>This passage is profound.</p>',
   );
 });
 
@@ -67,7 +67,7 @@ it('does nothing when skipping reference tagging', async () => {
   const result = await processor.process(document);
 
   expect(String(result)).toEqual(
-    '<h1>Heading</h1>\n<p>bible: Prov 26:4-5</p>\n<p>This passage is profound.</p>'
+    '<h1>Heading</h1>\n<p>bible: Prov 26:4-5</p>\n<p>This passage is profound.</p>',
   );
 });
 
@@ -87,6 +87,6 @@ it('cooperates with the tag-bible-references plugin', async () => {
   const result = await processor.process(document);
 
   expect(String(result)).toEqual(
-    '<h1>Heading</h1>\n<blockquote>\n<p style="font-size:12pt; margin-left:45pt; text-indent:-27pt;" lang="en-US">\n\t\tDo not answer a fool according to his folly \n\t</p>\n\t<p style="font-size:12pt; margin-left:63pt; text-indent:-27pt;" lang="en-US">\n\t\tlest you become like him—even you. \n\t</p>\n\t<p style="font-size:12pt; margin-left:45pt; text-indent:-27pt;" lang="en-US">\n\t\tAnswer a fool according to his folly, \n\t</p>\n\t<p style="font-size:12pt; margin-left:63pt; text-indent:-27pt;" lang="en-US">\n\t\tor else he will be wise in his own eyes.\n\t</p>\n<footer><a href="https://biblia.com/bible/leb/proverbs/26/4-5">Proverbs 26:4–5</a> (LEB)</footer>\n</blockquote>\n<p>This passage is profound.</p>'
+    '<h1>Heading</h1>\n<blockquote>\n<p style="font-size:12pt; margin-left:45pt; text-indent:-27pt;" lang="en-US">\n\t\tDo not answer a fool according to his folly \n\t</p>\n\t<p style="font-size:12pt; margin-left:63pt; text-indent:-27pt;" lang="en-US">\n\t\tlest you become like him—even you. \n\t</p>\n\t<p style="font-size:12pt; margin-left:45pt; text-indent:-27pt;" lang="en-US">\n\t\tAnswer a fool according to his folly, \n\t</p>\n\t<p style="font-size:12pt; margin-left:63pt; text-indent:-27pt;" lang="en-US">\n\t\tor else he will be wise in his own eyes.\n\t</p>\n<footer><a href="https://biblia.com/bible/leb/proverbs/26/4-5">Proverbs 26:4–5</a> (LEB)</footer>\n</blockquote>\n<p>This passage is profound.</p>',
   );
 });
