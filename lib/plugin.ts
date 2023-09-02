@@ -42,7 +42,7 @@ export function insertBibleContent({
     const passageReferences = await scanTextNodes(
       tree,
       bibliaApi,
-      skipReferenceDetection
+      skipReferenceDetection,
     );
 
     const downloadPassage = createPassageDownloader({ bibliaApi, esvApi });
@@ -56,16 +56,19 @@ export function insertBibleContent({
       await Promise.all(
         Object.keys(uniqueReferences).map(
           async passage =>
-            [passage, await downloadPassage(passage, version || 'leb')] as const
-        )
-      )
+            [
+              passage,
+              await downloadPassage(passage, version || 'leb'),
+            ] as const,
+        ),
+      ),
     );
 
     const urls = Object.fromEntries(
       Object.entries(uniqueReferences).map(
         ([passage, parts]) =>
-          [passage, createBibliaLink(version, parts)] as const
-      )
+          [passage, createBibliaLink(version, parts)] as const,
+      ),
     );
 
     // TODO: Use a smarter mapping to reader-friendly names.
@@ -88,20 +91,20 @@ export function insertBibleContent({
                       parts: uniqueReferences[passageReference],
                     },
                   },
-                  [build('text', passageReference)]
+                  [build('text', passageReference)],
                 ),
                 build('text', versionSuffix),
               ]),
             ]),
-          ] as const
-      )
+          ] as const,
+      ),
     );
 
     const replacements = Object.fromEntries(
       Object.entries(passageReferences).map(
         ([unparsedReference, { passage }]) =>
-          [unparsedReference, quotations[passage]] as const
-      )
+          [unparsedReference, quotations[passage]] as const,
+      ),
     );
 
     return applyReplacements(tree, replacements, skipReferenceDetection);

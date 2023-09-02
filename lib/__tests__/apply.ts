@@ -19,7 +19,7 @@ it('replaces nodes', () => {
   const replacements = {
     'Proverbs 26:4-5': build(
       'paragraph',
-      build('text', 'replacement paragraph')
+      build('text', 'replacement paragraph'),
     ),
   };
 
@@ -30,7 +30,7 @@ it('replaces nodes', () => {
       build('paragraph', [build('text', 'third paragraph')]),
       build('paragraph', [build('text', 'bible: not a reference')]),
       build('paragraph', build('text', 'replacement paragraph')),
-    ])
+    ]),
   );
 });
 
@@ -52,7 +52,7 @@ it('respect the skipReference detection flag', () => {
   const replacements = {
     'Proverbs 26:4-5': build(
       'paragraph',
-      build('text', 'replacement paragraph')
+      build('text', 'replacement paragraph'),
     ),
   };
 
@@ -63,6 +63,6 @@ it('respect the skipReference detection flag', () => {
       build('paragraph', [build('text', 'third paragraph')]),
       build('paragraph', [build('text', 'bible: not a reference')]),
       build('paragraph', build('text', 'replacement paragraph')),
-    ])
+    ]),
   );
 });

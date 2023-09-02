@@ -11,7 +11,7 @@ type PassageParts = {
 
 export function createBibliaLink(
   version: string,
-  { book, endBook, chapter, endChapter, verse, endVerse }: PassageParts
+  { book, endBook, chapter, endChapter, verse, endVerse }: PassageParts,
 ) {
   if (endBook || endChapter) {
     return `${bibliaPrefix}/${encodeURIComponent(version)}/${formatPassage({
@@ -27,7 +27,7 @@ export function createBibliaLink(
 
   let result = `${bibliaPrefix}/${encodeURIComponent(version)}/${formatPassage(
     { book, chapter, verse },
-    '/'
+    '/',
   )}`;
   if (endVerse) {
     result += `-${endVerse}`;
@@ -42,7 +42,7 @@ function formatPassage(
     chapter,
     verse,
   }: Partial<Pick<PassageParts, 'book' | 'chapter' | 'verse'>>,
-  separator = '-'
+  separator = '-',
 ) {
   const components = [];
   if (book) {

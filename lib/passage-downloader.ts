@@ -16,7 +16,7 @@ export function createPassageDownloader({
 }: createPassageDownloaderOptions) {
   return async function functionDownloadPassage(
     passage: string,
-    version: AvailableBible
+    version: AvailableBible,
   ) {
     const text = await downloadPassageText(passage, version);
 
@@ -54,11 +54,11 @@ export function createPassageDownloader({
 
   async function downloadBibliaPassage(
     passage: string,
-    version: Exclude<AvailableBible, 'esv'>
+    version: Exclude<AvailableBible, 'esv'>,
   ) {
     if (!bibliaApi) {
       throw new Error(
-        `${version} passages cannot be downloaded without the Biblia API.`
+        `${version} passages cannot be downloaded without the Biblia API.`,
       );
     }
 
