@@ -17,9 +17,8 @@ type InsertBibleContentOptions = {
   skipReferenceDetection?: boolean;
 };
 
-type UnwrappedPromise<T extends Promise<any>> = T extends Promise<infer U>
-  ? U
-  : never;
+type UnwrappedPromise<T extends Promise<any>> =
+  T extends Promise<infer U> ? U : never;
 
 type PassageParts = UnwrappedPromise<
   ReturnType<BibliaApiClient['parse']>
